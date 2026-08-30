@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022C22"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A3E635"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
+  
+  <!-- Stylized PlantX 'X' with botanical Leaf glyph -->
+  <!-- Left to right diagonal stem -->
+  <line x1="18" y1="18" x2="46" y2="46" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Right to left diagonal branches -->
+  <line x1="46" y1="18" x2="36" y2="28" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <line x1="28" y1="36" x2="18" y2="46" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Center Vibrant Botanical Leaf -->
+  <path d="M 32 14 C 44 22 44 42 32 50 C 20 42 20 22 32 14 Z" fill="url(#leafGrad)" />
+  <path d="M 32 18 Q 32 34 32 46" stroke="#064E3B" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

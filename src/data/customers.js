@@ -1,0 +1,62 @@
+export const mockCustomerProfile = {
+  id: 'usr-88910',
+  firstName: 'Alexander',
+  lastName: 'Vance',
+  email: 'alexander.vance@example.com',
+  phone: '+1 (206) 555-0192',
+  avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+  role: 'CUSTOMER',
+  joinedDate: 'January 2025',
+  membershipTier: 'PlantX Green Patron (Tier II)',
+  totalOrders: 6,
+  totalSavedWishlist: 4,
+  primaryAddress: {
+    street: '742 Evergreen Terrace',
+    city: 'Seattle',
+    state: 'WA',
+    postalCode: '98101',
+    country: 'United States',
+  },
+  savedAddresses: [
+    {
+      id: 'addr-1',
+      title: 'Home (Primary)',
+      fullName: 'Alexander Vance',
+      street: '742 Evergreen Terrace',
+      city: 'Seattle',
+      state: 'WA',
+      postalCode: '98101',
+      country: 'United States',
+      phone: '+1 (206) 555-0192',
+      isDefault: true,
+    },
+    {
+      id: 'addr-2',
+      title: 'Studio / Office',
+      fullName: 'Alexander Vance (Design Lab)',
+      street: '1200 Westlake Ave N, Suite 400',
+      city: 'Seattle',
+      state: 'WA',
+      postalCode: '98109',
+      country: 'United States',
+      phone: '+1 (206) 555-0199',
+      isDefault: false,
+    }
+  ]
+};
+
+export const mockB2BProfile = {
+  id: 'b2b-55102',
+  companyName: 'Azura Luxury Resorts & Spa',
+  taxId: 'AE-TRN-998822109',
+  contactPerson: 'David Sterling',
+  role: 'BUSINESS',
+  email: 'david.sterling@azuraresorts.com',
+  phone: '+971 4 388 9000',
+  country: 'United Arab Emirates',
+  creditLimit: 100000.00,
+  availableCredit: 81550.00,
+  paymentTerms: 'Net 30 / Escrow',
+  dedicatedAccountManager: 'Victoria Sterling (Global Trade Desk)',
+  managerEmail: 'v.sterling@plantxglobal.com',
+};
