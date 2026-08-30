@@ -4,12 +4,13 @@ import logoImg from '../../assets/plantx-logo.png';
 
 export default function Logo({
   variant = 'dark', // 'dark' | 'light'
-  size = 'default', // 'small' (38px), 'default' (52px), 'large' (64px)
+  size = 'default', // 'small' (38px), 'default' (50px), 'large' (64px)
   to = '/',
   className = '',
+  withBadge = false,
 }) {
   const isLight = variant === 'light';
-  const imgHeight = size === 'small' ? 38 : size === 'large' ? 64 : 52;
+  const imgHeight = size === 'small' ? 36 : size === 'large' ? 60 : 48;
 
   return (
     <Link
@@ -20,9 +21,13 @@ export default function Logo({
         alignItems: 'center',
         textDecoration: 'none',
         transition: 'transform 0.2s ease, opacity 0.2s ease',
+        background: isLight || withBadge ? '#FFFFFF' : 'transparent',
+        padding: isLight || withBadge ? '6px 14px' : '0',
+        borderRadius: isLight || withBadge ? '10px' : '0',
+        boxShadow: isLight || withBadge ? '0 2px 10px rgba(0, 0, 0, 0.12)' : 'none',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.opacity = '0.92';
+        e.currentTarget.style.opacity = '0.95';
         e.currentTarget.style.transform = 'scale(1.02)';
       }}
       onMouseLeave={(e) => {
@@ -36,10 +41,9 @@ export default function Logo({
         style={{
           height: `${imgHeight}px`,
           width: 'auto',
-          maxWidth: '240px',
+          maxWidth: '220px',
           objectFit: 'contain',
           display: 'block',
-          filter: isLight ? 'brightness(0) invert(1)' : 'none',
         }}
       />
     </Link>
