@@ -8,7 +8,7 @@ export default function PlantGallery({ images = [], alt = 'Plant Image' }) {
     return (
       <div
         style={{
-          height: '420px',
+          height: '300px',
           background: '#F0F5F2',
           borderRadius: '16px',
           display: 'flex',
@@ -26,13 +26,13 @@ export default function PlantGallery({ images = [], alt = 'Plant Image' }) {
     <div>
       {/* Large Featured Image View */}
       <div
+        className="plantx-gallery-main"
         style={{
           width: '100%',
-          height: '440px',
           borderRadius: '16px',
           overflow: 'hidden',
           backgroundColor: '#F0F5F2',
-          marginBottom: '16px',
+          marginBottom: '12px',
           border: '1px solid #DDE8E1',
         }}
       >
@@ -51,7 +51,7 @@ export default function PlantGallery({ images = [], alt = 'Plant Image' }) {
 
       {/* Thumbnail Bar */}
       {images.length > 1 && (
-        <Row gutter={[12, 12]}>
+        <Row gutter={[8, 8]}>
           {images.map((img, idx) => {
             const isSelected = (selectedImage || images[0]) === img;
             return (
@@ -59,8 +59,8 @@ export default function PlantGallery({ images = [], alt = 'Plant Image' }) {
                 <div
                   onClick={() => setSelectedImage(img)}
                   style={{
-                    height: '80px',
-                    borderRadius: '10px',
+                    height: '70px',
+                    borderRadius: '8px',
                     overflow: 'hidden',
                     cursor: 'pointer',
                     border: isSelected ? '2px solid #059669' : '1px solid #DDE8E1',
@@ -79,6 +79,17 @@ export default function PlantGallery({ images = [], alt = 'Plant Image' }) {
           })}
         </Row>
       )}
+
+      <style>{`
+        .plantx-gallery-main {
+          height: 420px;
+        }
+        @media (max-width: 768px) {
+          .plantx-gallery-main {
+            height: 280px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
